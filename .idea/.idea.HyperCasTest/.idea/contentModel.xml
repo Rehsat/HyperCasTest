@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\alesa\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\alesa\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_HyperCasTest.-1416153827.00" t="ExcludeRecursive" />
-    <e p="C:\Users\alesa\OneDrive\Рабочий стол\ject\BallGame\HyperCasTest" t="IncludeRecursive">
+    <e p="C:\Users\alesa\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_HyperCasTest.1267390552.00" t="ExcludeRecursive" />
+    <e p="C:\work4\HyperCasTest" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AssetStore" t="Include">
@@ -37,6 +38,23 @@
             <e p="SupercyanShaderLighting.cginc" t="Include" />
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="GameInitialization.cs" t="Include" />
           <e p="Movement" t="Include">
@@ -45,6 +63,20 @@
             <e p="PlayerAnimationController.cs" t="Include" />
             <e p="RigidbodyMovement.cs" t="Include" />
           </e>
+          <e p="Plant" t="Include">
+            <e p="FruitGenerator.cs" t="Include" />
+            <e p="Fruits" t="Include">
+              <e p="Fruit.cs" t="Include" />
+              <e p="FruitData.cs" t="Include" />
+            </e>
+            <e p="FruitTree.cs" t="Include" />
+          </e>
+          <e p="Store" t="Include">
+            <e p="Storable.cs" t="Include" />
+            <e p="StorablesCollector.cs" t="Include" />
+            <e p="Storage.cs" t="Include" />
+          </e>
+          <e p="TriggerObserver.cs" t="Include" />
         </e>
       </e>
       <e p="HyperCasTest.sln" t="IncludeFlat" />
