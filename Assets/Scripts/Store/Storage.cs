@@ -16,6 +16,7 @@ public class Storage : MonoBehaviour
     
     public void AddStorable(Storable storable)
     {
+        storable.transform.parent = _startStoragePostion;
         storable.StartMoveToPoint(GetNextStoragePosition());
         _storables.Push(storable);
     }
@@ -27,6 +28,11 @@ public class Storage : MonoBehaviour
 
     public Vector3 GetNextStoragePosition()
     {
-        return _startStoragePostion.position + _spacing * _storables.Count;
+        return Vector3.zero + _spacing * _storables.Count;
+    }
+
+    public int GetEmptySLotsCount()
+    {
+        return _maxStorablesInStorage - CurrentStorablesCount;
     }
 }

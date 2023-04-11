@@ -51,6 +51,7 @@ public class FruitTree : MonoBehaviour, IStorablesContainer
             
             var fruit = _activeFruits.Pop();
             _fruitGenerator.TakeFruit();
+            _currentPositition--;
             list.Add(fruit);
         }
         _fruitGenerator.StartGenerate();

@@ -17,11 +17,11 @@ public abstract class Storable : MonoBehaviour
 
     private IEnumerator MoveToPoint()
     {
-        while (Vector3.Distance(transform.position, _pointToMove) > 0.02f)
+        while (Vector3.Distance(transform.position, _pointToMove) > 0.1f)
         {
             yield return null;
-            transform.position = Vector3.Lerp
-                (transform.position, _pointToMove, _moveSpeed);
+            transform.localPosition = Vector3.Lerp
+                (transform.localPosition, _pointToMove, _moveSpeed);
         }
     }
     
