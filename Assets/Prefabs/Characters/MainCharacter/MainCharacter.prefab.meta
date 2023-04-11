@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: 1e8e1924bb442334c9125455634bb567
-labels:
-- Character
-- Male
-- Man
-- Mobile
-timeCreated: 1483633196
-licenseType: Store
-NativeFormatImporter:
+guid: e8e99fb918d3ba24b8737a4aa2e9dc2f
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

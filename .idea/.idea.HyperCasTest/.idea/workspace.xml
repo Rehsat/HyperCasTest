@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/MainCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/MainCharacter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/MainCharacter.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/MainCharacter.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/Storable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Store/Storable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Store/Storage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
@@ -73,9 +71,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Store/IStorable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerObserver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Store/Storable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Store/Storage.cs" />
       </list>
     </option>
@@ -130,7 +128,7 @@
       <updated>1681156662692</updated>
       <workItem from="1681156671923" duration="1950000" />
       <workItem from="1681213613319" duration="4669000" />
-      <workItem from="1681220857893" duration="12284000" />
+      <workItem from="1681220857893" duration="15747000" />
     </task>
     <servers />
   </component>
