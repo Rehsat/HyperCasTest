@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6017706517978362785}
   - component: {fileID: 6017706517978362784}
   - component: {fileID: -1979243203345814559}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dollar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,4 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d0cd455df284a429d69fdcdfeda7c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 0.1
+  _moveSpeed: 0.05
+  _cost: 1

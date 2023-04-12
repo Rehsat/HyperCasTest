@@ -32,7 +32,8 @@ public class FruitTree : MonoBehaviour, IStorablesContainer
     {
         var fruit = _fruitFactory.GetFruit();
         _activeFruits.Push(fruit);
-        fruit.StartMoveToPoint(_plantsPosition[_currentPositition].position);
+        var position = _plantsPosition[_currentPositition];
+        fruit.StartMoveToPoint(transform, position.localPosition);
         _currentPositition++;
     }
 

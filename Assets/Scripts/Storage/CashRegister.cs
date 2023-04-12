@@ -11,11 +11,11 @@ public class CashRegister : MonoBehaviour
     
     [SerializeField] private Transform _boxSpawnPosition;
     [SerializeField] private Box _boxPrefab;
-    [SerializeField] private Dollar _dollarPrefab;
+    [SerializeField] private Cash _dollarPrefab;
     [SerializeField] private Storage _moneyStorage;
 
     private bool _isReadyToServe;
-    private Storage _playerStorage;
+    private CashCollector _playerCashCollector;
     private Queue<Storage> _clients = new Queue<Storage>();
 
     private void OnEnable()
@@ -30,7 +30,6 @@ public class CashRegister : MonoBehaviour
         Debug.LogError(potentialClient.gameObject.name);
         if (potentialClient.TryGetComponent<Storage>(out var client))
         {
-            Debug.LogError(2);
             _clients.Enqueue(client);
         }
         
@@ -38,7 +37,10 @@ public class CashRegister : MonoBehaviour
 
     private void StartServe(Collider other)
     {
-        
+        if (_playerCashCollector == null)
+        {
+            _playerCashCollector = other.GetComponent<CashCollector>();
+        }
         if(_clients.Count == 0) return;
         _isReadyToServe = true;
         StartCoroutine(Serve());
@@ -57,14 +59,14 @@ public class CashRegister : MonoBehaviour
             var box = Instantiate(_boxPrefab, _boxSpawnPosition.position, Quaternion.identity);
             var moneyCount = 0;
             
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.5f);
             while (client.CurrentStorablesCount>0)
             {
                 var storable = client.GetStorable();
                 box.Storage.AddStorable(storable);
                 if (storable is Fruit fruit)
                     moneyCount += fruit.FruitData.Cost;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.5f);
             }
 
             for(int i =0; i<moneyCount;i++)
@@ -73,6 +75,21 @@ public class CashRegister : MonoBehaviour
                 _moneyStorage.AddStorable(money);
             }
             client.AddStorable(box);
+            yield return new WaitForSeconds(2f);
+            if (_isReadyToServe)
+            {
+                while (_moneyStorage.CurrentStorablesCount != 0)
+                {
+                    var storable = _moneyStorage.GetStorable();
+                    storable.StartMoveToPoint(_playerCashCollector.transform, 
+                        _playerCashCollector.Transform.localPosition, () =>
+                    {
+                        _playerCashCollector.AddCash();
+                        storable.gameObject.SetActive(false);
+                    });
+                }
+            }
+                
         }
     }
 

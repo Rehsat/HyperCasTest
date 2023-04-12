@@ -33,8 +33,7 @@ public class Storage : MonoBehaviour, IStorablesContainer
 
     public void AddStorable(Storable storable)
     {
-        storable.transform.parent = _startStoragePostion;
-        storable.StartMoveToPoint(GetNextStoragePosition());
+        storable.StartMoveToPoint(_startStoragePostion,GetNextStoragePosition());
         _storables.Push(storable);
     }
 
@@ -46,9 +45,6 @@ public class Storage : MonoBehaviour, IStorablesContainer
     public Vector3 GetNextStoragePosition()
     {
         var rowNumber = _storables.Count / _maxInRow;
-       // var lastStorablePlacePosition = _storables.Count > 0 ? 
-         //   _storables.Peek().transform.localPosition : Vector3.zero;
-
         var nextPosition = Vector3.zero +
                            (rowNumber*_rowOverflowSpacing +  _storables.Count%_maxInRow * _standartSpacing);
         return nextPosition;

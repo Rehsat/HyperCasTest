@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,10 +7,26 @@ public abstract class Storable : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     private Vector3 _pointToMove;
-    public void StartMoveToPoint(Vector3 point)
+    private Action _callback;
+
+    
+
+    public void StartMoveToPoint(Transform point, Action onGotDestination = null)
+    {
+        StartMoveToPoint(point.parent, point.position, onGotDestination);
+    }
+
+    public void StartMoveToPoint(Vector3 point, Action onGotDestination = null)
+    {
+        StartMoveToPoint(null, point, onGotDestination);
+    }
+
+    public void StartMoveToPoint(Transform parrent, Vector3 point, Action onGotDestination = null)
     {
         StopAllCoroutines();
+        transform.parent = parrent;
         _pointToMove = point;
+        _callback = onGotDestination;
         StartCoroutine(MoveToPoint());
     }
 
@@ -17,12 +34,14 @@ public abstract class Storable : MonoBehaviour
 
     private IEnumerator MoveToPoint()
     {
-        while (Vector3.Distance(transform.position, _pointToMove) > 0.1f)
+        while (Vector3.Distance(transform.localPosition, _pointToMove) > 0.05f)
         {
             yield return null;
             transform.localPosition = Vector3.Lerp
                 (transform.localPosition, _pointToMove, _moveSpeed);
         }
+        
+        _callback?.Invoke();
     }
     
     
