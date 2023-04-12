@@ -20,23 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Apple.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/FruitData/Apple.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/FruitData/Apple.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/Storable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/Storable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/Storage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Store/Storage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerEnterObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TriggerObserver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TriggerEnterObserver.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +81,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEnterObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tweens/BounceScaleTweener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Client/CleintAIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
       </list>
     </option>
   </component>
@@ -152,7 +137,7 @@
       <workItem from="1681156671923" duration="1950000" />
       <workItem from="1681213613319" duration="4669000" />
       <workItem from="1681220857893" duration="16143000" />
-      <workItem from="1681277075595" duration="12981000" />
+      <workItem from="1681277075595" duration="13955000" />
     </task>
     <servers />
   </component>
@@ -268,26 +253,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\work4\HyperCasTest\Assets\Scripts\Storage\CashRegister.cs" initialLine="37">
-            <startOffsets>
-              <option value="1213" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1495" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs</url>
-          <line>28</line>
+          <line>29</line>
           <properties documentPath="C:\work4\HyperCasTest\Assets\Scripts\Storage\CashRegister.cs" initialLine="28">
             <startOffsets>
-              <option value="931" />
+              <option value="961" />
             </startOffsets>
             <endOffsets>
-              <option value="979" />
+              <option value="1009" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

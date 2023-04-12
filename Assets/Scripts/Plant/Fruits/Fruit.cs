@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fruit : Storable
 {
     [SerializeField] private FruitData _fruitData;
+    public FruitData FruitData => _fruitData;
 
     public override int GetId()
     {

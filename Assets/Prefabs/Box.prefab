@@ -132,10 +132,10 @@ MonoBehaviour:
   _playOnEnable: 1
   _startScale: 0
   _bounceScale:
-    _scale: 1.2
+    _scale: 1
     _timeToScale: 1
   _endScale:
-    _scale: 1
+    _scale: 0.8
     _timeToScale: 0.5
 --- !u!114 &8552439782177323974
 MonoBehaviour:

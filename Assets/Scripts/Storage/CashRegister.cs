@@ -11,6 +11,7 @@ public class CashRegister : MonoBehaviour
     
     [SerializeField] private Transform _boxSpawnPosition;
     [SerializeField] private Box _boxPrefab;
+    [SerializeField] private Dollar _dollarPrefab;
     [SerializeField] private Storage _moneyStorage;
 
     private bool _isReadyToServe;
@@ -37,18 +38,6 @@ public class CashRegister : MonoBehaviour
 
     private void StartServe(Collider other)
     {
-        Debug.LogError(5);/*
-        if (_playerStorage == null)
-        {
-            if (other.TryGetComponent<Storage>(out var storage))
-            {
-                _playerStorage = storage;
-            }
-            else
-            {
-                return;
-            }
-        }*/
         
         if(_clients.Count == 0) return;
         _isReadyToServe = true;
@@ -66,15 +55,23 @@ public class CashRegister : MonoBehaviour
         {
             var client = _clients.Dequeue();
             var box = Instantiate(_boxPrefab, _boxSpawnPosition.position, Quaternion.identity);
+            var moneyCount = 0;
             
             yield return new WaitForSeconds(1.5f);
             while (client.CurrentStorablesCount>0)
             {
                 var storable = client.GetStorable();
                 box.Storage.AddStorable(storable);
+                if (storable is Fruit fruit)
+                    moneyCount += fruit.FruitData.Cost;
                 yield return new WaitForSeconds(1f);
             }
-            
+
+            for(int i =0; i<moneyCount;i++)
+            {
+                var money = Instantiate(_dollarPrefab, client.transform.position, Quaternion.identity);
+                _moneyStorage.AddStorable(money);
+            }
             client.AddStorable(box);
         }
     }
