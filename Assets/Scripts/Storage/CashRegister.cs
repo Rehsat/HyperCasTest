@@ -27,7 +27,6 @@ public class CashRegister : MonoBehaviour
 
     private void TryAddClient(Collider potentialClient)
     {
-        Debug.LogError(potentialClient.gameObject.name);
         if (potentialClient.TryGetComponent<Storage>(out var client))
         {
             _clients.Enqueue(client);
@@ -41,6 +40,8 @@ public class CashRegister : MonoBehaviour
         {
             _playerCashCollector = other.GetComponent<CashCollector>();
         }
+
+        SendCashToCollector();
         if(_clients.Count == 0) return;
         _isReadyToServe = true;
         StartCoroutine(Serve());
@@ -49,6 +50,20 @@ public class CashRegister : MonoBehaviour
     private void StopServe(Collider other)
     {
         _isReadyToServe = false;
+    }
+
+    private void SendCashToCollector()
+    {
+        while (_moneyStorage.CurrentStorablesCount != 0)
+        {
+            var storable = _moneyStorage.GetStorable();
+            storable.StartMoveToPoint(_playerCashCollector.transform, 
+                _playerCashCollector.Transform.localPosition, () =>
+                {
+                    _playerCashCollector.AddCash();
+                    storable.gameObject.SetActive(false);
+                });
+        }
     }
 
     private IEnumerator Serve()
@@ -78,16 +93,7 @@ public class CashRegister : MonoBehaviour
             yield return new WaitForSeconds(2f);
             if (_isReadyToServe)
             {
-                while (_moneyStorage.CurrentStorablesCount != 0)
-                {
-                    var storable = _moneyStorage.GetStorable();
-                    storable.StartMoveToPoint(_playerCashCollector.transform, 
-                        _playerCashCollector.Transform.localPosition, () =>
-                    {
-                        _playerCashCollector.AddCash();
-                        storable.gameObject.SetActive(false);
-                    });
-                }
+                SendCashToCollector();
             }
                 
         }

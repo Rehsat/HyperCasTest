@@ -12,6 +12,7 @@ public class CashCollector : MonoBehaviour
     
     
     public Transform Transform => _observer.transform;
+    public CashContainer Container => _container;
 
    
     public void AddCash()
