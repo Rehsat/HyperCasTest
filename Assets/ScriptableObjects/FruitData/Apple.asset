@@ -15,4 +15,4 @@ MonoBehaviour:
   _name: "\u042F\u0431\u043B\u043E\u043A\u043E"
   _cost: 0
   _growthTime: 0
-  _sprite: {fileID: 0}
+  _sprite: {fileID: 21300000, guid: acd90c4f35b523b409ebc26a2220d761, type: 3}

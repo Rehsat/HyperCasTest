@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class StorablesCollector : MonoBehaviour
 {
-    [SerializeField] private TriggerObserver _collectTrigger;
+    [SerializeField] private TriggerEnterObserver _collectTrigger;
     [SerializeField] private Storage _storage;
 
     private void OnEnable()

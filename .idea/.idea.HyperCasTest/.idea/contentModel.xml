@@ -56,6 +56,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Client" t="Include">
+            <e p="CleintAIController.cs" t="Include" />
+          </e>
           <e p="GameInitialization.cs" t="Include" />
           <e p="Movement" t="Include">
             <e p="InputObserver.cs" t="Include" />
@@ -71,12 +74,20 @@
             </e>
             <e p="FruitTree.cs" t="Include" />
           </e>
-          <e p="Store" t="Include">
+          <e p="Storage" t="Include">
+            <e p="Box.cs" t="Include" />
+            <e p="CashRegister.cs" t="Include" />
+            <e p="ItemBox.cs" t="Include" />
+            <e p="Stall.cs" t="Include" />
             <e p="Storable.cs" t="Include" />
             <e p="StorablesCollector.cs" t="Include" />
             <e p="Storage.cs" t="Include" />
           </e>
-          <e p="TriggerObserver.cs" t="Include" />
+          <e p="TriggerEnterObserver.cs" t="Include" />
+          <e p="TriggerExitObserver.cs" t="Include" />
+          <e p="Tweens" t="Include">
+            <e p="BounceScaleTweener.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="HyperCasTest.sln" t="IncludeFlat" />
