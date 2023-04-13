@@ -37,7 +37,7 @@ public abstract class Storable : MonoBehaviour
         {
             yield return null;
             transform.localPosition = Vector3.Lerp
-                (transform.localPosition, _pointToMove, _moveSpeed);
+                (transform.localPosition, _pointToMove, _moveSpeed * Time.deltaTime * 140);
         }
         
         _callback?.Invoke();
