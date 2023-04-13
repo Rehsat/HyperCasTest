@@ -23,7 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tweens/BounceScaleTweener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Client/AIIntentionWidget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" />
@@ -102,7 +103,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientAnimationController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEnterObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerExitObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToCameraRotator.cs" />
@@ -111,6 +111,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" />
       </list>
     </option>
   </component>
@@ -167,7 +169,7 @@
       <workItem from="1681220857893" duration="16143000" />
       <workItem from="1681277075595" duration="20779000" />
       <workItem from="1681325576898" duration="1638000" />
-      <workItem from="1681381057156" duration="22980000" />
+      <workItem from="1681381057156" duration="23336000" />
     </task>
     <servers />
   </component>
@@ -260,9 +262,9 @@
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state width="1637" height="351" key="GridCell.Tab.3.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681408564323">
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681409284144">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681408564323" />
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681409284144" />
   </component>
 </project>

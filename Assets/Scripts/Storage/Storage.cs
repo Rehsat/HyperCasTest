@@ -42,7 +42,7 @@ namespace Shop.Storages
             OnStorablesCountChange?.Invoke(CurrentStorablesCount, MaxStorablesInStorage);
             _standartSpacing = _isHorizontal ? new Vector3(_spacing.x, 0, 0) : new Vector3(0, _spacing.y, 0);
 
-            _rowOverflowSpacing = _isHorizontal ? new Vector3(0, _spacing.y, 0) : new Vector3(_spacing.x, 0, 0);
+            _rowOverflowSpacing = _isHorizontal ? new Vector3(0, _spacing.y, _spacing.z) : new Vector3(_spacing.x, 0, 0);
         }
 
         public void AddStorable(Storable storable)

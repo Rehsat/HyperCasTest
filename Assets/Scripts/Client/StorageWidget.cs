@@ -17,6 +17,7 @@ namespace Shop.Storages
         private void OnEnable()
         {
             _storage.OnStorablesCountChange += UpdateText;
+            UpdateText(_storage.CurrentStorablesCount, _storage.MaxStorablesInStorage);
         }
 
         private void UpdateText(int currentValue, int maxValue)

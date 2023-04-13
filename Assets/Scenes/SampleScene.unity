@@ -573,7 +573,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &388764452
 Transform:
@@ -1052,7 +1052,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &685215756
 Transform:
@@ -1240,7 +1240,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &736247851
 Transform:
@@ -1427,7 +1427,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &787936712
 Transform:
@@ -2090,7 +2090,7 @@ MonoBehaviour:
   _isHorizontal: 1
   _maxStorablesInStorage: 0
   _maxInRow: 5
-  _spacing: {x: 0.38, y: 0.26, z: 0}
+  _spacing: {x: 0.38, y: 0, z: 0.26}
   _startStoragePostion: {fileID: 1622176436}
 --- !u!4 &1622176436
 Transform:
@@ -2124,7 +2124,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1626804380
 Transform:
@@ -2348,6 +2348,9 @@ MonoBehaviour:
   _boxPrefab: {fileID: 8552439782177323974, guid: 3245ae4fa8b02ff4f95ec9814b2abdd1, type: 3}
   _dollarPrefab: {fileID: -1979243203345814559, guid: 37523f1028d994c42a2cc6fb97a3e9c8, type: 3}
   _moneyStorage: {fileID: 1622176435}
+  _delayBetweenServing: 0.5
+  _delayBetweenPutItemsInBox: 0.5
+  _delayBetweenSendCash: 1
 --- !u!33 &1885692815
 MeshFilter:
   m_ObjectHideFlags: 0
