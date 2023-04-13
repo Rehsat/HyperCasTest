@@ -34,7 +34,7 @@ public abstract class Storable : MonoBehaviour
 
     private IEnumerator MoveToPoint()
     {
-        while (Vector3.Distance(transform.localPosition, _pointToMove) > 0.05f)
+        while (Vector3.Distance(transform.localPosition, _pointToMove) > 0.01f)
         {
             yield return null;
             transform.localPosition = Vector3.Lerp

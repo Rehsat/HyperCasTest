@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1568612624}
   - component: {fileID: 1568612623}
   - component: {fileID: 1568612622}
+  - component: {fileID: 1831525742}
   m_Layer: 0
   m_Name: Collector
   m_TagString: Untagged
@@ -105,6 +106,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debug: 0
+  _observableLayer:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &1831525742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568612620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6e934577c90748a45f4d290bca08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _observableLayer:
     serializedVersion: 2
     m_Bits: 512
@@ -461,7 +477,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stall: {fileID: 0}
-  _cashRegister: {fileID: 0}
 --- !u!114 &1386058072870560713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11d027b0f4fe2448be830b4941428f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isReversed: 0
   _observer: {fileID: 2432457393138776160}
 --- !u!1 &1157946496253678
 GameObject:
@@ -1620,6 +1636,7 @@ GameObject:
   - component: {fileID: 3593038575004219669}
   - component: {fileID: 2627281812527326440}
   - component: {fileID: 2432457393138776160}
+  - component: {fileID: 418126556}
   m_Layer: 0
   m_Name: CashCollector
   m_TagString: Untagged
@@ -1668,6 +1685,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debug: 0
+  _observableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+--- !u!114 &418126556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371882892950475375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6e934577c90748a45f4d290bca08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _observableLayer:
     serializedVersion: 2
     m_Bits: 1024

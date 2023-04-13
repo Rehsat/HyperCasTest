@@ -12,6 +12,7 @@ public class FruitGenerator : MonoBehaviour
     
     private int _generatedPlantCount;
     private int _maxPlantGenerate;
+    private bool _isGenerating;
     
     public int GeneratedPlantCount
     {
@@ -39,8 +40,8 @@ public class FruitGenerator : MonoBehaviour
 
     public void StartGenerate()
     {
-        StopAllCoroutines();
-        StartCoroutine(Generate());
+        if (_isGenerating == false)
+            StartCoroutine(Generate());
     }
 
     public void TakeFruit()
@@ -50,7 +51,12 @@ public class FruitGenerator : MonoBehaviour
 
     private IEnumerator Generate()
     {
-        yield return new WaitForSeconds(_secondsToGenerate);
-        GeneratedPlantCount += _generationPerTick;
+        _isGenerating = true;
+        while (GeneratedPlantCount<_maxPlantGenerate)
+        {
+            yield return new WaitForSeconds(_secondsToGenerate);
+            GeneratedPlantCount += _generationPerTick;
+        }
+        _isGenerating = false;
     }
 }

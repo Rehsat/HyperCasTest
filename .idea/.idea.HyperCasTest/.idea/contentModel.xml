@@ -57,7 +57,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Client" t="Include">
-            <e p="CleintAIController.cs" t="Include" />
+            <e p="ClientAIController.cs" t="Include" />
+            <e p="ClientsController.cs" t="Include" />
+            <e p="StorageWidget.cs" t="Include" />
           </e>
           <e p="GameInitialization.cs" t="Include" />
           <e p="Money" t="Include">

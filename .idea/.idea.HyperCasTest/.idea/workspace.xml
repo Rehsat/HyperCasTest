@@ -20,14 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Dollar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Dollar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Client.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Client.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/AppleTree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/AppleTree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stall.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/CleintAIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/CleintAIController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +50,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/LookAtRotator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TriggerExitObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Movement/PlayerAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Storage/Cash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tweens/BounceScaleTweener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/CleintAIController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1D3DACD0-0CE4-41DC-8C61-D528A2193088/96/797bcc29/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,7 +77,6 @@
         <option value="$PROJECT_DIR$/Assets/AssetStore/Joystick Pack/Scripts/Base/Joystick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/LookAtRotator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInitializator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/InputObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/PlayerAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Movement/RigidbodyMovement.cs" />
@@ -75,7 +85,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/PlantGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/FruitVisualData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/FruitData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Store/IStorable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Store/Storable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Store/StorablesCollector.cs" />
@@ -88,20 +97,26 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEnterObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tweens/BounceScaleTweener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Client/CleintAIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Dollar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Cash.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyWidget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashWidget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuySlot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/CleintAIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" />
       </list>
     </option>
   </component>
@@ -135,10 +150,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20860">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="20860" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -158,7 +173,7 @@
       <workItem from="1681220857893" duration="16143000" />
       <workItem from="1681277075595" duration="20779000" />
       <workItem from="1681325576898" duration="1638000" />
-      <workItem from="1681381057156" duration="6740000" />
+      <workItem from="1681381057156" duration="14002000" />
     </task>
     <servers />
   </component>
@@ -187,38 +202,38 @@
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state width="463" height="464" key="DebuggerActiveHint/0.0.1680.1002@0.0.1680.1002" timestamp="1681287566736" />
-    <state width="1637" height="351" key="GridCell.Tab.0.bottom" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.0.bottom" timestamp="1681393589610">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.0.bottom/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.0.center" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.0.bottom/0.0.1680.1002@0.0.1680.1002" timestamp="1681393589610" />
+    <state width="1637" height="351" key="GridCell.Tab.0.center" timestamp="1681393589610">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.0.center/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.0.left" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.0.center/0.0.1680.1002@0.0.1680.1002" timestamp="1681393589610" />
+    <state width="1637" height="351" key="GridCell.Tab.0.left" timestamp="1681393589610">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.0.left/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.0.right" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.0.left/0.0.1680.1002@0.0.1680.1002" timestamp="1681393589610" />
+    <state width="1637" height="351" key="GridCell.Tab.0.right" timestamp="1681393589610">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.0.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.1.bottom" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.0.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681393589610" />
+    <state width="1637" height="351" key="GridCell.Tab.1.bottom" timestamp="1681393594398">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.1.bottom/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.1.center" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.1.bottom/0.0.1680.1002@0.0.1680.1002" timestamp="1681393594398" />
+    <state width="1637" height="351" key="GridCell.Tab.1.center" timestamp="1681393594398">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.1.center/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.1.left" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.1.center/0.0.1680.1002@0.0.1680.1002" timestamp="1681393594398" />
+    <state width="1637" height="351" key="GridCell.Tab.1.left" timestamp="1681393594398">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.1.left/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state width="1637" height="351" key="GridCell.Tab.1.right" timestamp="1681308507223">
+    <state width="1637" height="351" key="GridCell.Tab.1.left/0.0.1680.1002@0.0.1680.1002" timestamp="1681393594398" />
+    <state width="1637" height="351" key="GridCell.Tab.1.right" timestamp="1681393594398">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state width="1637" height="351" key="GridCell.Tab.1.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
+    <state width="1637" height="351" key="GridCell.Tab.1.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681393594398" />
     <state width="1637" height="351" key="GridCell.Tab.2.bottom" timestamp="1681308507223">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
@@ -251,9 +266,28 @@
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state width="1637" height="351" key="GridCell.Tab.3.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681386412129">
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681395599200">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681386412129" />
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681395599200" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs</url>
+          <line>62</line>
+          <properties documentPath="C:\work4\HyperCasTest\Assets\Scripts\Client\ClientAIController.cs" initialLine="67">
+            <startOffsets>
+              <option value="1699" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1700" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

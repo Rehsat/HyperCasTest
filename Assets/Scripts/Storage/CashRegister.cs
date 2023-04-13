@@ -91,6 +91,7 @@ public class CashRegister : MonoBehaviour
                 _moneyStorage.AddStorable(money);
             }
             client.AddStorable(box);
+            client.GetComponent<ClientAIController>().StartMoveToOut();
             yield return new WaitForSeconds(2f);
             if (_isReadyToServe)
             {

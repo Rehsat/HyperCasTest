@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 3396612249042723815}
   - component: {fileID: 3396612249042723832}
   - component: {fileID: 3396612249042723833}
+  - component: {fileID: 700245649}
   m_Layer: 0
   m_Name: CollectZone
   m_TagString: Untagged
@@ -259,6 +260,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _debug: 0
+  _observableLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &700245649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396612249042723834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6e934577c90748a45f4d290bca08f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _observableLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -400,7 +416,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3396612249683816157}
-  m_LocalRotation: {x: -0.22629867, y: -0, z: -0, w: 0.974058}
+  m_LocalRotation: {x: -0.22630285, y: 0, z: 0, w: 0.974057}
   m_LocalPosition: {x: 1.1808703, y: 0.296, z: 3.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

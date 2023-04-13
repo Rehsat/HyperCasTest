@@ -16,14 +16,12 @@ public class FruitTree : MonoBehaviour, IStorablesContainer
     private FruitFactory _fruitFactory;
     private Stack<Fruit> _activeFruits = new Stack<Fruit>();
     
-    private void Awake()
-    {
-        _fruitGenerator.Init(_plantsPosition.Count);
-        _fruitFactory = new FruitFactory(_fruit, _fruitStartSpawnPosition.position);
-    }
+    
 
     private void OnEnable()
     {
+        _fruitGenerator.Init(_plantsPosition.Count);
+        _fruitFactory = new FruitFactory(_fruit, _fruitStartSpawnPosition.position);
         _fruitGenerator.OnPlantsGenerated += DoThing;
         _fruitGenerator.StartGenerate();
     }

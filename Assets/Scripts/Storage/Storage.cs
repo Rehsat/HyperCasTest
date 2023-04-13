@@ -20,7 +20,18 @@ public class Storage : MonoBehaviour, IStorablesContainer
     private Stack<Storable> _storables = new Stack<Storable>();
     
     public int CurrentStorablesCount => _storables.Count;
+    public int MaxStorablesInStorage => _maxStorablesInStorage;
+    public Action<int, int> OnStorablesCountChange;
 
+    public void Init(int maxCount)
+    {
+        _maxStorablesInStorage = maxCount;
+        foreach (var storabe in _storables.ToArray())
+        {
+            Destroy(storabe.gameObject);
+        }
+        _storables.Clear();
+    }
     private void Start()
     {
         
@@ -35,6 +46,7 @@ public class Storage : MonoBehaviour, IStorablesContainer
     {
         storable.StartMoveToPoint(_startStoragePostion,GetNextStoragePosition());
         _storables.Push(storable);
+        OnStorablesCountChange?.Invoke(CurrentStorablesCount, MaxStorablesInStorage);
     }
 
     public Storable GetStorable()
@@ -64,7 +76,7 @@ public class Storage : MonoBehaviour, IStorablesContainer
             var lastPickUpedStorable = _storables.Pop();
             list.Add(lastPickUpedStorable);
         }
-
+        OnStorablesCountChange?.Invoke(CurrentStorablesCount, MaxStorablesInStorage);
         return list;
     }
 }

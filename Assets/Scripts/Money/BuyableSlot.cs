@@ -16,6 +16,8 @@ public class BuyableSlot : MonoBehaviour
     private CashCollector _cashCollector;
 
     private const float TIME_TO_GET_MONEY = 0.1f;
+
+    public Action<GameObject> OnBought;
     private void Awake()
     {
         _cashCollector = GetComponent<CashCollector>();
@@ -50,7 +52,8 @@ public class BuyableSlot : MonoBehaviour
             _cashCollector.AddCash();
             if (_cashCollector.Container.CashCount <= 0)
             {
-                Instantiate(_buyable, _buyableCreatePosition.position, _buyable.transform.rotation);
+                var buyable = Instantiate(_buyable, _buyableCreatePosition.position, _buyable.transform.rotation);
+                OnBought?.Invoke(buyable);
                 Destroy(gameObject);
                 break;
             }
