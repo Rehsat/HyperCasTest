@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Shop.Client;
 using Shop.Money;
 using Shop.Storages;
@@ -67,7 +68,7 @@ namespace Shop
                     _playerCashCollector.Transform.localPosition, () =>
                     {
                         _playerCashCollector.AddCash();
-                        storable.gameObject.SetActive(false);
+                        Destroy(storable.gameObject);
                     });
             }
         }
@@ -99,7 +100,7 @@ namespace Shop
 
                 client.AddStorable(box);
                 client.GetComponent<ClientAIController>().StartMoveToOut();
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(1f);
                 if (_isReadyToServe)
                 {
                     SendCashToCollector();

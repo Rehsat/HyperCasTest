@@ -47,8 +47,10 @@ namespace Shop.Money
             while (_buyerCashCollector.TryGetCash())
             {
 
-                var dollar = Instantiate(_dollar, _buyerCashCollector.transform.position, Quaternion.identity);
-                dollar.StartMoveToPoint(transform, Vector3.down, () => { dollar.gameObject.SetActive(false); });
+                var paymentValute = Instantiate(_dollar, _buyerCashCollector.transform.position, Quaternion.identity);
+                paymentValute.StartMoveToPoint(transform, Vector3.down, () =>
+                {  Destroy(paymentValute.gameObject); });
+                
                 _cashCollector.AddCash();
                 if (_cashCollector.Container.CashCount <= 0)
                 {
