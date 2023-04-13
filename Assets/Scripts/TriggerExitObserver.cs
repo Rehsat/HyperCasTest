@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerExitObserver : MonoBehaviour
+namespace Shop
 {
-    [SerializeField] private LayerMask _observableLayer;
-    public Action<Collider> OnExitTrigger { get; set; }
-
-    private void OnTriggerExit(Collider other)
+    public class TriggerExitObserver : MonoBehaviour
     {
-        if (other.gameObject.IsInLayer(_observableLayer))
-            OnExitTrigger?.Invoke(other);
+        [SerializeField] private LayerMask _observableLayer;
+        public Action<Collider> OnExitTrigger { get; set; }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.gameObject.IsInLayer(_observableLayer))
+                OnExitTrigger?.Invoke(other);
+        }
     }
 }

@@ -3,17 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToCameraRotator : MonoBehaviour
+namespace Shop
 {
-    private Transform _mainCameraTransform;
-
-    private void Start()
+    public class ToCameraRotator : MonoBehaviour
     {
-        _mainCameraTransform = Camera.main.transform;
-    }
+        private Transform _mainCameraTransform;
 
-    private void Update()
-    {
-        transform.LookAt(_mainCameraTransform);
+        private void Start()
+        {
+            _mainCameraTransform = Camera.main.transform;
+        }
+
+        private void Update()
+        {
+            transform.LookAt(_mainCameraTransform);
+        }
     }
 }
