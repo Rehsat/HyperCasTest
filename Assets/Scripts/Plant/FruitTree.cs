@@ -24,11 +24,11 @@ namespace Shop.Storages
         {
             _fruitGenerator.Init(_plantsPosition.Count);
             _fruitFactory = new FruitFactory(_fruit, _fruitStartSpawnPosition.position);
-            _fruitGenerator.OnPlantsGenerated += DoThing;
+            _fruitGenerator.OnPlantsGenerated += MoveGeneratedFruitsToPoints;
             _fruitGenerator.StartGenerate();
         }
 
-        private void DoThing(int generatedFruitsCount)
+        private void MoveGeneratedFruitsToPoints(int generatedFruitsCount)
         {
             var fruit = _fruitFactory.GetFruit();
             _activeFruits.Push(fruit);
@@ -39,7 +39,7 @@ namespace Shop.Storages
 
         private void OnDisable()
         {
-            _fruitGenerator.OnPlantsGenerated -= DoThing;
+            _fruitGenerator.OnPlantsGenerated -= MoveGeneratedFruitsToPoints;
         }
 
         public List<Storable> GetStorables(int count)

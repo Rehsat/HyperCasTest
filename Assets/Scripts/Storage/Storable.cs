@@ -6,11 +6,10 @@ using UnityEngine;
 public abstract class Storable : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
+    
     private Vector3 _pointToMove;
     private Action _callback;
-
     
-
     public void StartMoveToPoint(Transform point, Action onGotDestination = null)
     {
         StartMoveToPoint(point.parent, point.position, onGotDestination);
