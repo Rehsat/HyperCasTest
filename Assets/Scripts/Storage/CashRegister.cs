@@ -21,6 +21,7 @@ namespace Shop
         [SerializeField] private Storage _moneyStorage;
 
         private bool _isReadyToServe;
+        private bool _isServing;
         private CashCollector _playerCashCollector;
         private Queue<Storage> _clients = new Queue<Storage>();
 
@@ -46,7 +47,6 @@ namespace Shop
             {
                 _playerCashCollector = other.GetComponent<CashCollector>();
             }
-
             SendCashToCollector();
             if (_clients.Count == 0) return;
             _isReadyToServe = true;

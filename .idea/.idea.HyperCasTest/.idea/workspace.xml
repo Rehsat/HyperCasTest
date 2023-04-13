@@ -22,29 +22,12 @@
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DustParticle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DustParticle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Apple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Apple.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Client.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Client.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/Animations/MainCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/Animations/MainCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/Animations/MainCharacter.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/Animations/MainCharacter.controller.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/AppleTree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/AppleTree.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Dollar.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Dollar.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/AIIntentionWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Client/AIIntentionWidget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Client/ClientAIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/ClientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Client/ClientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Client/StorageWidget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/CashWidget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/CashWidget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Cash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Cash.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tweens/BounceScaleTweener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tweens/BounceScaleTweener.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1D3DACD0-0CE4-41DC-8C61-D528A2193088/96/797bcc29/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Client/ClientsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/Fruit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Storage/Box.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RigidbodyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
@@ -125,12 +108,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashWidget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Cash.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientAnimationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
       </list>
     </option>
   </component>
@@ -187,7 +171,7 @@
       <workItem from="1681220857893" duration="16143000" />
       <workItem from="1681277075595" duration="20779000" />
       <workItem from="1681325576898" duration="1638000" />
-      <workItem from="1681381057156" duration="19692000" />
+      <workItem from="1681381057156" duration="20648000" />
     </task>
     <servers />
   </component>

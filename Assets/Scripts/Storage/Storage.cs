@@ -33,7 +33,7 @@ namespace Shop.Storages
             {
                 Destroy(storabe.gameObject);
             }
-
+            OnStorablesCountChange?.Invoke(CurrentStorablesCount, MaxStorablesInStorage);
             _storables.Clear();
         }
 

@@ -71,6 +71,7 @@
           <e p="Client" t="Include">
             <e p="AIIntentionWidget.cs" t="Include" />
             <e p="ClientAIController.cs" t="Include" />
+            <e p="ClientAnimationController.cs" t="Include" />
             <e p="ClientsController.cs" t="Include" />
             <e p="StorageWidget.cs" t="Include" />
           </e>
