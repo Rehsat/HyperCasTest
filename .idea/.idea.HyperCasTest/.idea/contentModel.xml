@@ -61,6 +61,7 @@
           </e>
           <e p="GameInitialization.cs" t="Include" />
           <e p="Money" t="Include">
+            <e p="BuyableSlot.cs" t="Include" />
             <e p="CashCollector.cs" t="Include" />
             <e p="CashContainer.cs" t="Include" />
             <e p="CashWidget.cs" t="Include" />

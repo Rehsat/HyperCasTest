@@ -66,6 +66,7 @@ public class CashRegister : MonoBehaviour
         }
     }
 
+    //TODO: Убрать магические числа
     private IEnumerator Serve()
     {
         while (_clients.Count > 0)

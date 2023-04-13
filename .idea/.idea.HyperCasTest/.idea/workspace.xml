@@ -22,10 +22,11 @@
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/MainCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/MainCharacter/MainCharacter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Dollar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Dollar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Money/CashContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Money/CashContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,13 +93,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/Fruits/Fruit.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Cash.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/MoneyWidget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashWidget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuySlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +157,8 @@
       <workItem from="1681213613319" duration="4669000" />
       <workItem from="1681220857893" duration="16143000" />
       <workItem from="1681277075595" duration="20779000" />
-      <workItem from="1681325576898" duration="1197000" />
+      <workItem from="1681325576898" duration="1638000" />
+      <workItem from="1681381057156" duration="6740000" />
     </task>
     <servers />
   </component>
@@ -247,9 +251,9 @@
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state width="1637" height="351" key="GridCell.Tab.3.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681291366665">
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681386412129">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681291366665" />
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681386412129" />
   </component>
 </project>

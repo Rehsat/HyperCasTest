@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CashCollector : MonoBehaviour
 {
     
+    [SerializeField] private bool _isReversed;
     [SerializeField] private TriggerEnterObserver _observer;
     private CashContainer _container = new CashContainer();
     
@@ -17,6 +14,20 @@ public class CashCollector : MonoBehaviour
    
     public void AddCash()
     {
-        _container.CashCount++;
+        AddCash(1);
+    }
+
+    public void AddCash(int cashCount)
+    {
+        var modification = _isReversed ? -cashCount : cashCount;
+        _container.CashCount += modification;
+    }
+
+    public bool TryGetCash()
+    {
+        var haveCash = _container.CashCount > 0;
+        if (haveCash)
+            _container.CashCount--;
+        return haveCash;
     }
 }
