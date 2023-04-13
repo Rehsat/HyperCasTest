@@ -7,6 +7,7 @@ using UnityEngine;
 public class BounceScaleTweener : MonoBehaviour
 {
     [SerializeField] private bool _playOnEnable;
+    [SerializeField] private bool _destroyObComplete;
     [SerializeField] private float _startScale;
     [SerializeField] private TweenScale _bounceScale;
     [SerializeField] private TweenScale _endScale;
@@ -30,7 +31,14 @@ public class BounceScaleTweener : MonoBehaviour
         transform.localScale = startScale;
         var firstTween = transform.DOScale(bounceScale, _bounceScale.TimeToScale);
         var secondTween = transform.DOScale(endScale, _endScale.TimeToScale);
-        _sequence.Append(firstTween).Append(secondTween);
+        _sequence.Append(firstTween).Append(secondTween).OnComplete(() =>
+        {
+            if (_destroyObComplete)
+            {
+                _sequence.Kill();
+                Destroy(gameObject);
+            }
+        });
 
         _sequence.Play();
 

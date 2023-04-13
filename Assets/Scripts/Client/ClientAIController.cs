@@ -48,7 +48,6 @@ public class ClientAIController : MonoBehaviour
         _fruitData = fruitData;
         _outPosition = outPosition;
         _cashRegister = cashRegister;
-        Debug.LogError(itemStorages.Count);
         
         var randomStallId = Random.Range(0, _itemStorages.Count);
         var randomStall = _itemStorages[randomStallId];
