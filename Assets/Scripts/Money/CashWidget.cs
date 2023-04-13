@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class CashWidget : MonoBehaviour
+public class CashWidget :  MonoBehaviour
 {
     [SerializeField] private CashCollector _cashCollector;
     [SerializeField] private Text _cashCountText;

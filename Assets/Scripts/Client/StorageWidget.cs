@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StorageWidget : MonoBehaviour
+public class StorageWidget :  MonoBehaviour
 {
+    [SerializeField] private bool _showOnlyOnMax;
     [SerializeField] private Storage _storage;
     [SerializeField] private Text _text;
     
@@ -13,12 +14,24 @@ public class StorageWidget : MonoBehaviour
 
     private void OnEnable()
     {
-        _storage.OnStorablesCountChange +=
+        _storage.OnStorablesCountChange += UpdateText;
     }
 
     private void UpdateText(int currentValue, int maxValue)
     {
-        var text = currentValue >= maxValue ? _onMaxText : $"{currentValue}/{maxValue}";
+        var isMax = currentValue >= maxValue;
+        
+        if (_showOnlyOnMax && isMax == false) 
+            _text.gameObject.SetActive(false);
+        else
+            _text.gameObject.SetActive(true);
+        
+        var text =  isMax ? _onMaxText : $"{currentValue}/{maxValue}";
         _text.text = text;
+    }
+
+    private void OnDisable()
+    {
+        _storage.OnStorablesCountChange -= UpdateText;
     }
 }

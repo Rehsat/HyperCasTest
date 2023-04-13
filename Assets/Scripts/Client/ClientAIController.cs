@@ -1,12 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(Storage))]
 public class ClientAIController : MonoBehaviour
 {
-    [SerializeField] private Stall _stall;
+     private Stall _stall;
 
      private CashRegister _cashRegister;
   //  [SerializeField] private 
@@ -26,9 +28,13 @@ public class ClientAIController : MonoBehaviour
         get => _currentIntention;
         set
         {
+            
+            OnIntentionChanged?.Invoke(value);
             _currentIntention = value;
         }
     }
+
+    public Action<IntentionType> OnIntentionChanged;
 
     public void Init(int itemsNeedCount, List<Storage> itemStorages, FruitData fruitData, Transform outPosition, 
         CashRegister cashRegister)
@@ -44,16 +50,22 @@ public class ClientAIController : MonoBehaviour
         _cashRegister = cashRegister;
         Debug.LogError(itemStorages.Count);
         
-        ChangeIntention(MoveToItems(), IntentionType.GetItems);
+        var randomStallId = Random.Range(0, _itemStorages.Count);
+        var randomStall = _itemStorages[randomStallId];
+        ChangeIntention( IntentionType.GetItems,MoveToItems(), randomStall.transform);
     }
 
     
 
 
-    private void ChangeIntention(IEnumerator intention, IntentionType intentionType)
+    private void ChangeIntention( IntentionType intentionType, IEnumerator intention = null, Transform agentDestination = null)
     {
         StopAllCoroutines();
-        StartCoroutine(intention);
+        
+        if (intention != null)
+            StartCoroutine(intention);
+        if (agentDestination != null)
+            _navMeshAgent.SetDestination(agentDestination.position);
         
         CurrentIntention = intentionType;
     }
@@ -61,21 +73,18 @@ public class ClientAIController : MonoBehaviour
 
     private IEnumerator MoveToItems()
     {
-        var randomStallId = Random.Range(0, _itemStorages.Count);
-        var randomStall = _itemStorages[randomStallId];
-        _navMeshAgent.SetDestination(randomStall.transform.position);
         while (_storage.CurrentStorablesCount < _storage.MaxStorablesInStorage)
         {
             yield return null;
         }
         
-        _navMeshAgent.SetDestination(_cashRegister.transform.position);
+        ChangeIntention( IntentionType.Pay, agentDestination: _cashRegister.transform);
     }
 
     
     public void StartMoveToOut()
     {
-        _navMeshAgent.SetDestination(_outPosition.position);
+        ChangeIntention( IntentionType.MoveOut, agentDestination: _outPosition);
     }
     
 }

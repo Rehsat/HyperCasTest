@@ -34,7 +34,7 @@ public class Storage : MonoBehaviour, IStorablesContainer
     }
     private void Start()
     {
-        
+        OnStorablesCountChange?.Invoke(CurrentStorablesCount, MaxStorablesInStorage);
         _standartSpacing = _isHorizontal ? 
             new Vector3(_spacing.x, 0, 0) : new Vector3(0, _spacing.y, 0);
         
