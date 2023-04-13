@@ -21,6 +21,11 @@ namespace Shop
         [SerializeField] private Cash _dollarPrefab;
         [SerializeField] private Storage _moneyStorage;
 
+        [Header("Timings")] 
+        [SerializeField] private float _delayBetweenServing = 0.5f;
+        [SerializeField] private float _delayBetweenPutItemsInBox = 0.5f;
+        [SerializeField] private float _delayBetweenSendCash = 1f;
+
         private bool _isReadyToServe;
         private bool _isServing;
         private CashCollector _playerCashCollector;
@@ -82,14 +87,14 @@ namespace Shop
                 var box = Instantiate(_boxPrefab, _boxSpawnPosition.position, Quaternion.identity);
                 var moneyCount = 0;
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(_delayBetweenServing);
                 while (client.CurrentStorablesCount > 0)
                 {
                     var storable = client.GetStorable();
                     box.Storage.AddStorable(storable);
                     if (storable is Fruit fruit)
                         moneyCount += fruit.FruitData.Cost;
-                    yield return new WaitForSeconds(0.5f);
+                    yield return new WaitForSeconds(_delayBetweenPutItemsInBox);
                 }
 
                 for (int i = 0; i < moneyCount; i++)
@@ -100,7 +105,7 @@ namespace Shop
 
                 client.AddStorable(box);
                 client.GetComponent<ClientAIController>().StartMoveToOut();
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(_delayBetweenSendCash);
                 if (_isReadyToServe)
                 {
                     SendCashToCollector();

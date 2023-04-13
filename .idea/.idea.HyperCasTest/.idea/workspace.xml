@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,10 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4fcb531-9cd1-4059-a69c-a9fd5b29c0df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Apple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plants/Apple/Apple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,16 +101,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Money/CashCollector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/ItemBox.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/StorablesCollector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Client/ClientAnimationController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storage.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerEnterObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TriggerExitObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ToCameraRotator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameInitialization.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Storage/Storable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Plant/FruitTree.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Money/BuyableSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Storage/CashRegister.cs" />
       </list>
     </option>
   </component>
@@ -167,7 +167,7 @@
       <workItem from="1681220857893" duration="16143000" />
       <workItem from="1681277075595" duration="20779000" />
       <workItem from="1681325576898" duration="1638000" />
-      <workItem from="1681381057156" duration="22465000" />
+      <workItem from="1681381057156" duration="22980000" />
     </task>
     <servers />
   </component>
@@ -260,9 +260,9 @@
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state width="1637" height="351" key="GridCell.Tab.3.right/0.0.1680.1002@0.0.1680.1002" timestamp="1681308507223" />
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681408395217">
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1681408564323">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
-    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681408395217" />
+    <state x="503" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1680.1002@0.0.1680.1002" timestamp="1681408564323" />
   </component>
 </project>
