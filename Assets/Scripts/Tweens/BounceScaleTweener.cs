@@ -1,56 +1,60 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class BounceScaleTweener : MonoBehaviour
+namespace Shop
 {
-    [SerializeField] private bool _playOnEnable;
-    [SerializeField] private bool _destroyObComplete;
-    [SerializeField] private float _startScale;
-    [SerializeField] private TweenScale _bounceScale;
-    [SerializeField] private TweenScale _endScale;
-    private Sequence _sequence;
 
-    private void OnEnable()
+
+    public class BounceScaleTweener : MonoBehaviour
     {
-        if(_playOnEnable)
-            PlayBounceAnimation();
-    }
+        [SerializeField] private bool _playOnEnable;
+        [SerializeField] private bool _destroyObComplete;
+        [SerializeField] private float _startScale;
+        [SerializeField] private TweenScale _bounceScale;
+        [SerializeField] private TweenScale _endScale;
+        private Sequence _sequence;
 
-    public void PlayBounceAnimation()
-    {
-        _sequence?.Kill();
-
-        _sequence = DOTween.Sequence();
-        var startScale = Vector3.one * _startScale;
-        var bounceScale = Vector3.one * _bounceScale.Scale;
-        var endScale = Vector3.one * _endScale.Scale;
-
-        transform.localScale = startScale;
-        var firstTween = transform.DOScale(bounceScale, _bounceScale.TimeToScale);
-        var secondTween = transform.DOScale(endScale, _endScale.TimeToScale);
-        _sequence.Append(firstTween).Append(secondTween).OnComplete(() =>
+        private void OnEnable()
         {
-            if (_destroyObComplete)
+            if (_playOnEnable)
+                PlayBounceAnimation();
+        }
+
+        public void PlayBounceAnimation()
+        {
+            _sequence?.Kill();
+
+            _sequence = DOTween.Sequence();
+            var startScale = Vector3.one * _startScale;
+            var bounceScale = Vector3.one * _bounceScale.Scale;
+            var endScale = Vector3.one * _endScale.Scale;
+
+            transform.localScale = startScale;
+            var firstTween = transform.DOScale(bounceScale, _bounceScale.TimeToScale);
+            var secondTween = transform.DOScale(endScale, _endScale.TimeToScale);
+            _sequence.Append(firstTween).Append(secondTween).OnComplete(() =>
             {
-                _sequence.Kill();
-                Destroy(gameObject);
-            }
-        });
+                if (_destroyObComplete)
+                {
+                    _sequence.Kill();
+                    Destroy(gameObject);
+                }
+            });
 
-        _sequence.Play();
+            _sequence.Play();
 
+        }
     }
-}
-[Serializable]
-public class TweenScale
-{
-    [SerializeField] private float _scale;
-    [SerializeField] private float _timeToScale;
 
-    public float Scale => _scale;
+    [Serializable]
+    public class TweenScale
+    {
+        [SerializeField] private float _scale;
+        [SerializeField] private float _timeToScale;
 
-    public float TimeToScale => _timeToScale;
+        public float Scale => _scale;
+
+        public float TimeToScale => _timeToScale;
+    }
 }

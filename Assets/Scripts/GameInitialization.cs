@@ -1,48 +1,54 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using Shop.Client;
+using Shop.Money;
+using Shop.Storages;
 using UnityEngine;
 
-public class GameInitialization : MonoBehaviour
+namespace Shop
 {
-    [SerializeField] private InputObserver _inputObserver;
-    [SerializeField] private ClientsController _clientsController;
-    
-    [SerializeField] private List<MonoBehaviour> _listeners;
-    [SerializeField] private List<BuyableSlot> _buyableSlots;
 
-    private void Awake()
+    public class GameInitialization : MonoBehaviour
     {
-        var inputListeners = new List<IInputListener>();
-        foreach (var listener in _listeners)
+        [SerializeField] private InputObserver _inputObserver;
+        [SerializeField] private ClientsController _clientsController;
+
+        [SerializeField] private List<MonoBehaviour> _listeners;
+        [SerializeField] private List<BuyableSlot> _buyableSlots;
+
+        private void Awake()
         {
-            if (listener is IInputListener inputListener)
+            var inputListeners = new List<IInputListener>();
+            foreach (var listener in _listeners)
             {
-                inputListeners.Add(inputListener);
+                if (listener is IInputListener inputListener)
+                {
+                    inputListeners.Add(inputListener);
+                }
+            }
+
+            _inputObserver.Init(inputListeners);
+
+            foreach (var buyable in _buyableSlots)
+            {
+                buyable.OnBought += TryAddStorage;
             }
         }
-        _inputObserver.Init(inputListeners);
 
-        foreach (var buyable in _buyableSlots )
+        private void TryAddStorage(GameObject potentialStorage)
         {
-            buyable.OnBought += TryAddStorage;
+            if (potentialStorage.TryGetComponent<Storage>(out var storage))
+            {
+                _clientsController.AddStorage(storage);
+            }
         }
-    }
 
-    private void TryAddStorage(GameObject potentialStorage)
-    {
-        if (potentialStorage.TryGetComponent<Storage>(out var storage))
+        private void OnDestroy()
         {
-            _clientsController.AddStorage(storage);
-        }
-    }
+            foreach (var buyable in _buyableSlots)
+            {
+                buyable.OnBought -= TryAddStorage;
+            }
 
-    private void OnDestroy()
-    {
-        foreach (var buyable in _buyableSlots )
-        {
-            buyable.OnBought -= TryAddStorage;
         }
-        
     }
 }

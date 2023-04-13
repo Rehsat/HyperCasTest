@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2651509232985099697}
   - component: {fileID: 7592011166299645451}
   - component: {fileID: 4499812999888440623}
+  - component: {fileID: -4297783269932385722}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -112,3 +113,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 0.05
   _fruitData: {fileID: 11400000, guid: ea879902e2281744c84c117ca49b25b7, type: 2}
+--- !u!114 &-4297783269932385722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249661363115056359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

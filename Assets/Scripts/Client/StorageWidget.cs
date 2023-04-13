@@ -4,34 +4,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StorageWidget :  MonoBehaviour
+namespace Shop.Storages
 {
-    [SerializeField] private bool _showOnlyOnMax;
-    [SerializeField] private Storage _storage;
-    [SerializeField] private Text _text;
-    
-    [SerializeField] private string _onMaxText;
-
-    private void OnEnable()
+    public class StorageWidget : MonoBehaviour
     {
-        _storage.OnStorablesCountChange += UpdateText;
-    }
+        [SerializeField] private bool _showOnlyOnMax;
+        [SerializeField] private Storage _storage;
+        [SerializeField] private Text _text;
 
-    private void UpdateText(int currentValue, int maxValue)
-    {
-        var isMax = currentValue >= maxValue;
-        
-        if (_showOnlyOnMax && isMax == false) 
-            _text.gameObject.SetActive(false);
-        else
-            _text.gameObject.SetActive(true);
-        
-        var text =  isMax ? _onMaxText : $"{currentValue}/{maxValue}";
-        _text.text = text;
-    }
+        [SerializeField] private string _onMaxText;
 
-    private void OnDisable()
-    {
-        _storage.OnStorablesCountChange -= UpdateText;
+        private void OnEnable()
+        {
+            _storage.OnStorablesCountChange += UpdateText;
+        }
+
+        private void UpdateText(int currentValue, int maxValue)
+        {
+            var isMax = currentValue >= maxValue;
+
+            if (_showOnlyOnMax && isMax == false)
+                _text.gameObject.SetActive(false);
+            else
+                _text.gameObject.SetActive(true);
+
+            var text = isMax ? _onMaxText : $"{currentValue}/{maxValue}";
+            _text.text = text;
+        }
+
+        private void OnDisable()
+        {
+            _storage.OnStorablesCountChange -= UpdateText;
+        }
     }
 }

@@ -2,24 +2,27 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class CashWidget :  MonoBehaviour
+namespace Shop.Money
 {
-    [SerializeField] private CashCollector _cashCollector;
-    [SerializeField] private Text _cashCountText;
-
-    private void OnEnable()
+    public class CashWidget : MonoBehaviour
     {
-        _cashCollector.Container.OnCashCountChanged += UpdateCashCountText;
-    }
+        [SerializeField] private CashCollector _cashCollector;
+        [SerializeField] private Text _cashCountText;
 
-    private void UpdateCashCountText(int cashCount)
-    {
-        _cashCountText.text = cashCount.ToString();
-    }
+        private void OnEnable()
+        {
+            _cashCollector.Container.OnCashCountChanged += UpdateCashCountText;
+            UpdateCashCountText(_cashCollector.Container.CashCount);
+        }
 
-    private void OnDisable()
-    {
-        _cashCollector.Container.OnCashCountChanged -= UpdateCashCountText;
+        private void UpdateCashCountText(int cashCount)
+        {
+            _cashCountText.text = cashCount.ToString();
+        }
+
+        private void OnDisable()
+        {
+            _cashCollector.Container.OnCashCountChanged -= UpdateCashCountText;
+        }
     }
 }

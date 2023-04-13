@@ -1,65 +1,67 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StorablesCollector : MonoBehaviour
+namespace Shop.Storages
 {
-    [SerializeField] private TriggerEnterObserver _collectTrigger;
-    [SerializeField] private Storage _storage;
-
-    private TriggerExitObserver _collectExitObserver;
-
-    private List<IStorablesContainer> _containers = new List<IStorablesContainer>();
-
-    
-
-    private void OnEnable()
+    public class StorablesCollector : MonoBehaviour
     {
-        _collectExitObserver = _collectTrigger.GetComponent<TriggerExitObserver>();
-        _collectTrigger.OnEnterTrigger += TryPlaceStorables;
-        _collectExitObserver.OnExitTrigger += TryRemoveStorables;
-    }
+        [SerializeField] private TriggerEnterObserver _collectTrigger;
+        [SerializeField] private Storage _storage;
 
-    private void Update()
-    {
-        if (_containers.Count > 0 )
+        private TriggerExitObserver _collectExitObserver;
+
+        private List<IStorablesContainer> _containers = new List<IStorablesContainer>();
+
+
+
+        private void OnEnable()
         {
-            foreach (var container in _containers)
+            _collectExitObserver = _collectTrigger.GetComponent<TriggerExitObserver>();
+            _collectTrigger.OnEnterTrigger += TryPlaceStorables;
+            _collectExitObserver.OnExitTrigger += TryRemoveStorables;
+        }
+
+        private void Update()
+        {
+            if (_containers.Count > 0)
             {
-                var emptySlotsCount = _storage.GetEmptySLotsCount();
-                var storables = container.GetStorables(emptySlotsCount);
-                foreach (var storable in storables)
+                foreach (var container in _containers)
                 {
-                    _storage.AddStorable(storable);
+                    var emptySlotsCount = _storage.GetEmptySLotsCount();
+                    var storables = container.GetStorables(emptySlotsCount);
+                    foreach (var storable in storables)
+                    {
+                        _storage.AddStorable(storable);
+                    }
                 }
             }
         }
-    }
 
-    private void TryPlaceStorables(Collider potentialStorable)
-    {
-        if (potentialStorable.TryGetComponent<IStorablesContainer>(out var storableContainer))
+        private void TryPlaceStorables(Collider potentialStorable)
         {
-            _containers.Add(storableContainer);
+            if (potentialStorable.TryGetComponent<IStorablesContainer>(out var storableContainer))
+            {
+                _containers.Add(storableContainer);
+            }
+        }
+
+        private void TryRemoveStorables(Collider potentialStorable)
+        {
+            if (potentialStorable.TryGetComponent<IStorablesContainer>(out var storableContainer))
+            {
+                _containers.Remove(storableContainer);
+            }
+        }
+
+        private void OnDisable()
+        {
+            _collectTrigger.OnEnterTrigger -= TryPlaceStorables;
+            _collectExitObserver.OnExitTrigger -= TryRemoveStorables;
         }
     }
-    private void TryRemoveStorables(Collider potentialStorable)
-    {
-        if (potentialStorable.TryGetComponent<IStorablesContainer>(out var storableContainer))
-        {
-            _containers.Remove(storableContainer);
-        }
-    }
 
-    private void OnDisable()
+    public interface IStorablesContainer
     {
-        _collectTrigger.OnEnterTrigger -= TryPlaceStorables;
-        _collectExitObserver.OnExitTrigger -= TryRemoveStorables;
+        public List<Storable> GetStorables(int count);
     }
-}
-
-public interface IStorablesContainer
-{
-    public List<Storable> GetStorables(int count);
 }

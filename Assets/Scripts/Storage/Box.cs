@@ -1,17 +1,21 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Storage))]
-public class Box : Storable
+namespace Shop.Storages
 {
-    public Storage Storage { get; private set; }
 
-    private void OnEnable()
+    [RequireComponent(typeof(Storage))]
+    public class Box : Storable
     {
-        Storage = GetComponent<Storage>();
-    }
+        public Storage Storage { get; private set; }
 
-    public override int GetId()
-    {
-        return 1;
+        private void OnEnable()
+        {
+            Storage = GetComponent<Storage>();
+        }
+
+        public override int GetId()
+        {
+            return 1;
+        }
     }
 }

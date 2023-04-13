@@ -4,42 +4,46 @@ using System.Collections.Generic;
 using UnityEditor.PackageManager;
 using UnityEngine;
 
-public class AIIntentionWidget : MonoBehaviour
+namespace Shop.Client
 {
-    [SerializeField] private ClientAIController _clientAI;
-    [SerializeField] private IntentionWidget[] _intentionWidgets;
-
-    private void OnEnable()
+    public class AIIntentionWidget : MonoBehaviour
     {
-        _clientAI.OnIntentionChanged += UpdateIntention;
-    }
+        [SerializeField] private ClientAIController _clientAI;
+        [SerializeField] private IntentionWidget[] _intentionWidgets;
 
-    private void UpdateIntention(IntentionType intentionType)
-    {
-        foreach (var widget in _intentionWidgets)
+        private void OnEnable()
         {
-            if (widget.IntentionType == intentionType)
+            _clientAI.OnIntentionChanged += UpdateIntention;
+        }
+
+        private void UpdateIntention(IntentionType intentionType)
+        {
+            foreach (var widget in _intentionWidgets)
             {
-                widget.Widget.SetActive(true);
-                continue;
+                if (widget.IntentionType == intentionType)
+                {
+                    widget.Widget.SetActive(true);
+                    continue;
+                }
+
+                widget.Widget.SetActive(false);
             }
-            widget.Widget.SetActive(false);
+        }
+
+        private void OnDisable()
+        {
+            _clientAI.OnIntentionChanged -= UpdateIntention;
         }
     }
 
-    private void OnDisable()
+    [Serializable]
+    public class IntentionWidget
     {
-        _clientAI.OnIntentionChanged -= UpdateIntention;
+        [SerializeField] private IntentionType _intentionType;
+        [SerializeField] private GameObject _widget;
+
+        public IntentionType IntentionType => _intentionType;
+
+        public GameObject Widget => _widget;
     }
-}
-
-[Serializable]
-public class IntentionWidget
-{
-    [SerializeField] private IntentionType _intentionType;
-    [SerializeField] private GameObject _widget;
-
-    public IntentionType IntentionType => _intentionType;
-
-    public GameObject Widget => _widget;
 }
